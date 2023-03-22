@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-// mongoose.connect(process.env.MONOGODB_URI,{ useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONOGODB_URI,{ useNewUrlParser: true, useUnifiedTopology: true })
 
-// const db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function(){
-//   console.log('Connected')
-// });
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function(){
+  console.log('Connected')
+});
 
 
 
@@ -23,9 +23,20 @@ mongoose
   });
 
 
-//models
-require('./Category');
-require('./Recipe');
+// //models
+// require('./Category');
+// require('./Recipe');
 
 
+// const mongoose = require('mongoose');
+// mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function(){
+//   console.log('Connected')
+// });
+
+// // Models
+// require('./Category');
+// require('./Recipe');
